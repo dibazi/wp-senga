@@ -19,17 +19,16 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', ltrim($DATABASE_URL["path"], "/") );
-
-/** MySQL database username */
-define( 'DB_USER', $DATABASE_URL["user"] );
-
-/** MySQL database password */
-define( 'DB_PASSWORD', $DATABASE_URL["pass"] );
-
-/** MySQL hostname */
-define( 'DB_HOST', $DATABASE_URL["host"] );
+if (isset($_SERVER["DATABASE_URL"])) {
+  $db = parse_url($_SERVER["DATABASE_URL"]);
+  define("DB_NAME", trim($db["path"],"/"));
+  define("DB_USER", $db["user"]);
+  define("DB_PASSWORD", $db["pass"]);
+  define("DB_HOST", $db["host"]);
+}
+else {
+  die("Your heroku DATABASE_URL does not appear to be correctly specified.");
+}
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
