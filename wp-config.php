@@ -23,15 +23,13 @@
 define( 'DB_NAME', '5432/d5g4n0voh43e48' );
 
 /** MySQL database username */
-define( 'DB_USER', 'postgres:
-//' );
+define( 'DB_USER', 'clmxjednwqgfmc' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'clmxjednwqgfmc' );
+define( 'DB_PASSWORD', 'b227a18332afd8a29381fd848cc3709762f38c6138e14d3deb42694c4762de5d' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'b227a18332afd8a29381fd848cc3709762f38c6138e14d3deb42694c4762de5d@ec2-35-174-118-71.compute-1.amazonaws.com:
-' );
+define( 'DB_HOST', 'ec2-35-174-118-71.compute-1.amazonaws.com' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
